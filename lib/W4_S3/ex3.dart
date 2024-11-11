@@ -24,9 +24,9 @@ class ImageGallery extends StatefulWidget {
 
 class _ImageGalleryState extends State<ImageGallery> {
   final List<String> imagePaths = [
-    'assets/image/image1.png',
-    'assets/image/image2.png',
-    'assets/image/image3.png',
+    'lib/assets/image1.png',
+    'lib/assets/image2.png',
+    'lib/assets/image3.png',
   ];
   int currentIndex = 0;
 
