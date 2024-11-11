@@ -11,15 +11,15 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Container(
-            padding: EdgeInsets.all(50),
+            padding: const EdgeInsets.all(50),
             color: Colors.blue[100],
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 buildTextContainer("OOP"),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 buildTextContainer("DART"),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 buildTextContainer("FLUTTER"),
               ],
             ),
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
   Widget buildTextContainer(String text) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       child: Center(
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 24,
             fontWeight: FontWeight.bold,
