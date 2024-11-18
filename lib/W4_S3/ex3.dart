@@ -68,7 +68,7 @@ class _ImageGalleryState extends State<ImageGallery> {
                     onPressed: _showPreviousImage,
                   ),
                   IconButton(
-                    icon: Icon(Icons.arrow_forward),
+                    icon: const Icon(Icons.arrow_forward),
                     onPressed: _showNextImage,
                   ),
                 ],
