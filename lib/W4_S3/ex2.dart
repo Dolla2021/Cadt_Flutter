@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,20 +14,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FavoriteCardsPage(),
+      home: const FavoriteCardsPage(),
     );
   }
 }
 
 class FavoriteCardsPage extends StatelessWidget {
+  const FavoriteCardsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorite Cards'),
+        title: const Text('Favorite Cards'),
       ),
       body: ListView(
-        children: [
+        children: const [
           FavoriteCard(title: 'Card 1', description: 'Description for card 1'),
           FavoriteCard(title: 'Card 2', description: 'Description for card 2'),
           FavoriteCard(title: 'Card 3', description: 'Description for card 3'),
@@ -39,8 +43,8 @@ class FavoriteCard extends StatefulWidget {
   final String title;
   final String description;
 
-  const FavoriteCard({Key? key, required this.title, required this.description})
-      : super(key: key);
+  const FavoriteCard(
+      {super.key, required this.title, required this.description});
 
   @override
   _FavoriteCardState createState() => _FavoriteCardState();
@@ -53,7 +57,7 @@ class _FavoriteCardState extends State<FavoriteCard> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(color: Colors.grey),
         ),
@@ -66,15 +70,15 @@ class _FavoriteCardState extends State<FavoriteCard> {
               children: [
                 Text(
                   widget.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 4.0),
+                const SizedBox(height: 4.0),
                 Text(
                   widget.description,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14.0,
                     color: Colors.grey,
                   ),

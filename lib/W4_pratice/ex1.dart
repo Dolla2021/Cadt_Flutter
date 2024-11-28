@@ -1,26 +1,30 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('My Hobbies')),
-        body: HobbiesList(),
+        appBar: AppBar(title: const Text('My Hobbies')),
+        body: const HobbiesList(),
       ),
     );
   }
 }
 
 class HobbiesList extends StatelessWidget {
+  const HobbiesList({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
+    return const Padding(
+      padding: EdgeInsets.all(10.0),
       child: Column(
         children: [
           HobbyCard(
@@ -46,16 +50,16 @@ class HobbyCard extends StatelessWidget {
   final Color backgroundColor;
 
   const HobbyCard({
-    Key? key,
+    super.key,
     required this.icon,
     required this.text,
     required this.backgroundColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(10),
@@ -67,10 +71,10 @@ class HobbyCard extends StatelessWidget {
             color: Colors.white,
             size: 30,
           ),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.bold,

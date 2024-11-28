@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 enum Product {
@@ -33,12 +33,14 @@ enum Product {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Products')),
-        body: ProductsList(),
+        appBar: AppBar(title: const Text('Products')),
+        body: const ProductsList(),
       ),
     );
   }
@@ -46,6 +48,8 @@ class MyApp extends StatelessWidget {
 
 // Part 3: Stateless widget for a list of products
 class ProductsList extends StatelessWidget {
+  const ProductsList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -70,17 +74,17 @@ class ProductCard extends StatelessWidget {
   final String description;
 
   const ProductCard({
-    Key? key,
+    super.key,
     required this.imagePath,
     required this.title,
     required this.description,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15),
-      margin: EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.all(15),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(color: Colors.blue, width: 2),
@@ -93,19 +97,19 @@ class ProductCard extends StatelessWidget {
             width: 50,
             height: 50,
           ),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 description,
                 style: TextStyle(

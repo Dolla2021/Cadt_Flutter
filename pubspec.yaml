@@ -30,8 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-
+   intl: ^0.18.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -41,6 +40,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -73,7 +73,7 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
-  # For details regarding adding assets from package dependencies, see
+  # For details reg uuid: ^3.0.7arding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package
 
   # To add custom fonts to your application, add a fonts section here,

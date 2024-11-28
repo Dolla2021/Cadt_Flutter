@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,10 +36,7 @@ class MyApp extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Colors.blue[300]!,
-            const Color.fromARGB(255, 172, 199, 223)!
-          ],
+          colors: [Colors.blue[300]!, const Color.fromARGB(255, 172, 199, 223)],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),

@@ -37,13 +37,13 @@ void main() {
                   height: 100,
                   color: Colors.yellow,
                 ),
-                SizedBox(width: 20), // Space between boxes
+                const SizedBox(width: 20), // Space between boxes
                 Container(
                   width: 50, // Adjust width if needed
                   height: 100,
                   color: Colors.yellow,
                 ),
-                SizedBox(width: 20), // Space between boxes
+                const SizedBox(width: 20), // Space between boxes
                 Container(
                   width: 50, // Adjust width if needed
                   height: 100,

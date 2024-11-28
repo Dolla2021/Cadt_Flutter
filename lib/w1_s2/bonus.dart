@@ -53,7 +53,7 @@ class Robot {
         default:
           print('Invalid instruction: $instruction');
       }
-      print(getPositionAndDirection() + ' after $instruction');
+      print('${getPositionAndDirection()} after $instruction');
     }
   }
 

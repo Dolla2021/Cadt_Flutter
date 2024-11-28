@@ -16,19 +16,19 @@ class MyDuration {
 
   // Overloaded operator: >
   bool operator >(MyDuration other) {
-    return this._milliseconds > other._milliseconds;
+    return _milliseconds > other._milliseconds;
   }
 
   bool operator <(MyDuration other) {
-    return this._milliseconds < other._milliseconds;
+    return _milliseconds < other._milliseconds;
   }
 
   MyDuration operator +(MyDuration other) {
-    return MyDuration._(this._milliseconds + other._milliseconds);
+    return MyDuration._(_milliseconds + other._milliseconds);
   }
 
   MyDuration operator -(MyDuration other) {
-    int result = this._milliseconds - other._milliseconds;
+    int result = _milliseconds - other._milliseconds;
     if (result < 0) {
       throw Exception('Duration cannot be negative');
     }
@@ -48,8 +48,8 @@ class MyDuration {
 }
 
 void main() {
-  MyDuration duration1 = MyDuration.fromHours(2);
-  MyDuration duration2 = MyDuration.fromMinutes(10);
+  MyDuration duration1 = const MyDuration.fromHours(2);
+  MyDuration duration2 = const MyDuration.fromMinutes(10);
   //total duration
   print(duration1 + duration2);
 

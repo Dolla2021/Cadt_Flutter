@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,12 +14,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: ImageGallery(),
+      home: const ImageGallery(),
     );
   }
 }
 
 class ImageGallery extends StatefulWidget {
+  const ImageGallery({super.key});
+
   @override
   _ImageGalleryState createState() => _ImageGalleryState();
 }
@@ -46,7 +50,7 @@ class _ImageGalleryState extends State<ImageGallery> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Viewer'),
+        title: const Text('Image Viewer'),
       ),
       body: Center(
         child: Column(
@@ -64,7 +68,7 @@ class _ImageGalleryState extends State<ImageGallery> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.arrow_back),
+                    icon: const Icon(Icons.arrow_back),
                     onPressed: _showPreviousImage,
                   ),
                   IconButton(

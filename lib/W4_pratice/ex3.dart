@@ -10,12 +10,12 @@ class CustomButton extends StatelessWidget {
   final ButtonType buttonType;
 
   const CustomButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.icon,
     this.iconPositionRight = false,
     this.buttonType = ButtonType.primary,
-  }) : super(key: key);
+  });
 
   Color getButtonColor() {
     switch (buttonType) {
@@ -57,10 +57,12 @@ class CustomButton extends StatelessWidget {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -68,12 +70,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ButtonDemoScreen(),
+      home: const ButtonDemoScreen(),
     );
   }
 }
 
 class ButtonDemoScreen extends StatelessWidget {
+  const ButtonDemoScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -7,6 +7,7 @@ class Person {
 
   Person(this.name, this.age, this.dateofbirth, this._address, this.job);
 
+  @override
   String toString() {
     return 'Name: $name, Age: $age, Job: $job, DOB: $dateofbirth\nAddress: ${_address.toString()}';
   }
@@ -40,12 +41,12 @@ class BankAccount {
       throw Exception('Insufficient amount for withdrawal!');
     }
     _balance -= amount;
-    print('> Withdrew: \$${amount}.\n-> New Balance: \$$_balance');
+    print('> Withdrew: \$$amount.\n-> New Balance: \$$_balance');
   }
 
   void credit(double amount) {
     _balance += amount;
-    print('> Credited \$${amount}.\n-> New Balance: \$$_balance');
+    print('> Credited \$$amount.\n-> New Balance: \$$_balance');
   }
 }
 
